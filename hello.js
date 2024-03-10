@@ -39,7 +39,7 @@ const start = async () => {
                         delete usersData[userId];
                         sendMenu(chatId);
                     } else {
-                        bot.sendMessage(chatId, 'Пожалуйста, введите корректный номер телефона в формате "+XXXXXXXXXXX".');
+                        bot.sendMessage(chatId, '*Пожалуйста, введите корректный номер телефона в формате "+XXXXXXXXXXX".*', {parse_mode: 'Markdown'});
                     }
                     break;
             }
@@ -95,7 +95,7 @@ const start = async () => {
                 ]
             }
         };
-        bot.sendMessage(chatId, 'Поздравляем! Вы получили доступ к уникальным материалам 🔥', options);
+        bot.sendMessage(chatId, '*Поздравляем! Вы получили доступ к уникальным материалам 🔥*' + options, {parse_mode: 'Markdown'});
     }
 
 }
